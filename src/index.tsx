@@ -6,9 +6,14 @@ import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 import "./index.css";
 
+import { Counter } from "./counter-component";
+
 ReactDOM.render(
   <Provider store={ReduxStore}>
-    <App />
+    <div>
+      <App />
+      <Counter label="A Counter" />
+    </div>
   </Provider>,
   document.getElementById("root") as HTMLElement
 );
